@@ -1,12 +1,10 @@
-import { NavItem, SafekoHouse, StyledIcon, StyledNavigation, StyledTopBar, Title } from "./styled";
+import { NavItem, SafekoHouse, StyledIcon, StyledLogo, StyledNavigation, StyledTopBar, Title } from "./styled";
 
 const TopBar = () => {
   return (
     <StyledTopBar>
       <Title>
-      <StyledIcon />
-        <SafekoHouse isSafeko>Safeko_</SafekoHouse>
-        <SafekoHouse isHouse>house</SafekoHouse>
+      <StyledLogo /> 
       </Title>
       <StyledNavigation>
         <NavItem>Oferta</NavItem>
