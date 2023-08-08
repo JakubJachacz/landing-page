@@ -6,16 +6,20 @@ import { ReactComponent as ArrowRight } from "../../images/VectorRight.svg";
 export const StyledSlideshow = styled.div`
   display: flex;
   justify-content: center;
+  max-width: 1400px;
   width: 100%;
   height: 700px;
   background-color: lightgray;
-  margin: 0 10px;
-  position: relative;
+  margin: 0 auto;
 `;
 
 export const MainPictureContainer = styled.div`
-  width: 1400px;
-  height: 700px;
+  max-width: 1400px;
+  width: 100%;
+  max-height: 700px;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-image: url(${MainPicture});
   position: relative;
 `;
