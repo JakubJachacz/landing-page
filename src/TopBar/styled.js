@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as Aura_Favicon } from "../images/Aura_Favicon.svg"
+import { ReactComponent as Logo } from "../images/logo_safeko.svg"
 
 export const StyledTopBar = styled.div`
 display: flex;
@@ -11,14 +12,8 @@ height: 80px;
 export const Title = styled.div`
 display: flex;
 align-items: center;
-padding: 15px 45px;
-width: 210px;
-`;
-
-export const SafekoHouse = styled.span`
-font-weight: ${({ isSafeko }) => (isSafeko ? '600' : '500')};
-font-size: ${({ isHouse }) => (isHouse ? '20px' : '26px')};
-`;
+padding: 15px 60px; 
+`;  
 
 export const StyledIcon = styled(Aura_Favicon)`
 width: 50px;
@@ -39,4 +34,10 @@ color: #71746E;
 font-size: 17px;
 background-color: inherit;
 border: none;
+`;
+
+
+export const StyledLogo = styled(Logo)`
+width: 210px;
+height: 50px;
 `;
