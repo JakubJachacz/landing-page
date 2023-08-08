@@ -2,12 +2,12 @@ import {
   DescFirst,
   ItemFirst,
   Offer,
-  OfferContainer,
+  OfferContainer, 
   StyledSection,
   TitleFirst,
 } from "./styled";
 
-const Section = () => {
+const OfferSection = () => {
   return (
     <StyledSection>
       <OfferContainer>
@@ -21,9 +21,9 @@ const Section = () => {
             tłoku.
           </DescFirst>
         </ItemFirst>
-      </OfferContainer>
-    </StyledSection>
+      </OfferContainer> 
+    </StyledSection> 
   );
 };
 
-export default Section;
+export default OfferSection;
