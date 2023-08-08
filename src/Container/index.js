@@ -1,5 +1,6 @@
-import TopBar from "../TopBar"; 
-import Section from "./Section";
+import TopBar from "../TopBar";  
+import OfferDetails from "./OfferDetails";
+import OfferSection from "./Section";
 import Slideshow from "./Slideshow";
 
 const Container = () => {
@@ -7,7 +8,8 @@ const Container = () => {
     <> 
     <TopBar />
       <Slideshow />
-      <Section></Section>
+      <OfferSection /> 
+      <OfferDetails />
     </>
   );
 };
