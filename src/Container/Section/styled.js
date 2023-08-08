@@ -1,22 +1,17 @@
 import { styled } from "styled-components";
 
 export const StyledSection = styled.section`
-  height: 500px;
+  max-width: 1400px;
   width: 100%;
-  margin: 0 10px;
-  background-color: blue;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto; 
   padding-top: 60px;
 `;
 
 export const OfferContainer = styled.div`
-  width: 1400px;
-  height: 200px;
-  background-color: red; 
+  width: 100%;
+  height: 200px; 
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 5fr 7fr;
 `;
 
 export const Offer = styled.h1`
@@ -27,20 +22,20 @@ export const Offer = styled.h1`
   font-weight: 500;
 `;
 
-export const ItemFirst = styled.div`
-  background-color: cyan;
+export const ItemFirst = styled.div` 
   height: 200px;
   width: 539px;
 `;
 
 export const TitleFirst = styled.h2`
-margin-top: 25px;
-font-size: 36px;
-line-height: 39px;
-font-weight: 500;
+  margin-top: 25px;
+  font-size: 36px;
+  line-height: 39px;
+  font-weight: 500;
 `;
 
 export const DescFirst = styled.p`
-font-size: 18px;
-line-height: 24px;
+  font-size: 18px;
+  line-height: 24px; 
+  color: #474945;
 `;
