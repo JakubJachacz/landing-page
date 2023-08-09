@@ -25,7 +25,8 @@ export const MainPictureContainer = styled.div`
 `;
 
 export const Pagination = styled.span`
-  width: 355px;
+  max-width: 355px;
+  width: 100%;
   height: 80px;
   background-color: #181818;
   position: absolute;
@@ -36,32 +37,33 @@ export const Pagination = styled.span`
 `;
 
 export const ButtonsContainer = styled.div`
-width: 203px;
-height: 80px;
+  max-width: 203px;
+  width: 100%;
+  height: 80px;
 `;
 
-export const PaginationButton = styled.button` 
-  width: 80px;
+export const PaginationButton = styled.button`
+  max-width: 80px;
+  width: 100%;
   height: 80px;
   display: flex;
-  background-color: inherit; 
+  background-color: inherit;
   border: none;
 `;
 
-export const PaginationCounter = styled.p` 
-color: #FAFAFA;
-font-size: 18px; 
-line-height: 24px; 
-display: flex;
-align-items: center;
-padding: 10px 30px 10px 45px;
+export const PaginationCounter = styled.p`
+  color: #fafafa;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px 10px 45px;
 `;
 
-
 export const StyledArrowLeft = styled(ArrowLeft)`
-margin: auto;
+  margin: auto;
 `;
 
 export const StyledArrowRight = styled(ArrowRight)`
-margin: auto;
+  margin: auto;
 `;
