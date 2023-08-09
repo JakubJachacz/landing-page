@@ -1,4 +1,5 @@
 import TopBar from "../TopBar";  
+import Footer from "./Footer";
 import OfferDetails from "./OfferDetails";
 import OfferSection from "./Section";
 import Slideshow from "./Slideshow";
@@ -10,6 +11,7 @@ const Container = () => {
       <Slideshow />
       <OfferSection /> 
       <OfferDetails />
+      <Footer />
     </>
   );
 };
