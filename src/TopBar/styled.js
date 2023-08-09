@@ -24,7 +24,8 @@ export const StyledNavigation = styled.nav`
 display: flex;
 align-items: center;
 justify-content: flex-end;
-width: 410px;
+max-width: 410px;
+width: 100%;
 margin-right: 40px;
 `;
 
