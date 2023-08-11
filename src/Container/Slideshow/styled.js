@@ -8,9 +8,13 @@ export const StyledSlideshow = styled.div`
   justify-content: center;
   max-width: 1400px;
   width: 100%;
-  height: 700px;
-  background-color: lightgray;
+  max-height: 700px;
+  height: 100%; 
   margin: 0 auto;
+
+  @media (max-width: 1440px) {
+    margin: 0 20px;
+  }
 `;
 
 export const MainPictureContainer = styled.div`
@@ -22,13 +26,14 @@ export const MainPictureContainer = styled.div`
   background-repeat: no-repeat;
   background-image: url(${MainPicture});
   position: relative;
+  aspect-ratio: 2 / 1;
 `;
 
 export const Pagination = styled.span`
   max-width: 355px;
   width: 100%;
   height: 80px;
-  background-color: #181818;
+  background-color: #181818; 
   position: absolute;
   bottom: 0;
   right: 0;
