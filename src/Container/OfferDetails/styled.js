@@ -11,9 +11,8 @@ export const DetailsWrapper = styled.section`
   padding-top: 75px;
   width: 100%;
   max-width: 1440px;
-  height: 100%;
-  background-color: cyan;
-  margin: 0 auto;
+  height: 100%; 
+  margin: 0 auto; 
 `;
 
 export const PictureWrapper = styled.div`
@@ -32,8 +31,7 @@ export const PictureTwo = styled.div`
 
 export const DetailsContainer = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: red;
+  grid-template-columns: 1fr 1fr; 
   max-width: 1092px;
   width: 100%;
   height: 100%;
@@ -49,7 +47,7 @@ export const ColumnSecond = styled.div`
 `;
 
 export const BorderWrap = styled.div`
-  max-width: 430px;
+  max-width: 539px;
   width: 100%;
   height: 100%;
 `;
@@ -84,6 +82,7 @@ export const Wrapper = styled.span`
   border-bottom: 1px solid #181818;
   height: 48px;
   grid-column: 1;
+  max-width: 430px;
 
   ${({ isFirst }) =>
     isFirst &&
@@ -113,6 +112,7 @@ export const PictureThree = styled.div`
   padding-top: 110px;
   background-repeat: no-repeat;
   background-position: bottom;
+  aspect-ratio: 2 / 1;
 `;
 
 export const StyledP = styled.p`
@@ -160,11 +160,11 @@ export const StyledVectorRight = styled(VectorRight)`
 `;
 
 export const PictureFive = styled.div`
-  background-image: url(${FifthPicture});
-  background-repeat: no-repeat;
   max-width: 1400px;
   width: 100%;
   max-height: 524px;
   height: 100%;
-  margin-top: 105px;
+  margin-top: 105px; 
+  aspect-ratio: 1 / 2;
+  background-image: url(${FifthPicture});
 `;
