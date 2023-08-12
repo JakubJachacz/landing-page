@@ -1,4 +1,4 @@
-import { NavItem, StyledLogo, StyledNavigation, StyledTopBar, Title } from "./styled";
+import { NavButton, NavItem, StyledLogo, StyledNavigation, StyledTopBar, Title } from "./styled";
 
 const TopBar = () => {
   return (
@@ -9,6 +9,7 @@ const TopBar = () => {
       <StyledNavigation>
         <NavItem>Oferta</NavItem>
         <NavItem>Kontakt</NavItem>
+        <NavButton />
       </StyledNavigation>
     </StyledTopBar>
   );
