@@ -6,10 +6,12 @@ import {
   QuestionsContainer,
   Info,
   QuestionsTitle,
-  FooterText,
+  FooterText, 
 } from "./styled";
 
-const Footer = () => {
+const FooterComponent = () => {
+  // AIzaSyBkEnTvNr9ZedisHw5K8NcDHJqPOdARyos
+
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -23,19 +25,17 @@ const Footer = () => {
           <Info isLast>NIP: 712 338 48 46</Info>
           <Info>KRS: 0000779078</Info>
         </QuestionsContainer>
-        <Maps />
-        <Footer>
+        <Maps /> 
           <FooterText>© Safeko house</FooterText>
           <FooterText>Polityka prywatności</FooterText>
-          <FooterText>
+          <FooterText isLast>
             Stosujemy pliki cookies. Korzystanie ze strony bez zmiany ustawień
             przeglądarki oznacza, że pliki cookies będą zamieszczane w Twoim
-            urządzeniu.
-          </FooterText>
-        </Footer>
+            urządzeniu. Czytaj więcej
+          </FooterText> 
       </FooterWrapper>
     </FooterContainer>
   );
 };
 
-export default Footer;
+export default FooterComponent;
