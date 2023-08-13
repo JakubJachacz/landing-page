@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import {
   Contact,
   FooterContainer,
@@ -9,13 +10,13 @@ import {
   FooterText, 
 } from "./styled";
 
-const FooterComponent = () => {
+const FooterComponent = forwardRef((props, ref) => {
   // AIzaSyBkEnTvNr9ZedisHw5K8NcDHJqPOdARyos
 
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Contact>Kontakt</Contact>
+        <Contact ref={ref}>Kontakt</Contact>
         <QuestionsContainer>
           <QuestionsTitle>Masz pytania?</QuestionsTitle>
           <Info>Safeko house sp. z o.o.</Info>
@@ -36,6 +37,6 @@ const FooterComponent = () => {
       </FooterWrapper>
     </FooterContainer>
   );
-};
+});
 
 export default FooterComponent;
