@@ -1,4 +1,5 @@
 import {
+  ButtonsContainer,
   MainPictureContainer,
   Pagination,
   PaginationButton,
@@ -13,13 +14,15 @@ const Slideshow = () => {
     <StyledSlideshow>
       <MainPictureContainer>
         <Pagination>
-          <PaginationButton> 
-            <StyledArrowLeft /> 
-          </PaginationButton>
-          <PaginationButton> 
-            <StyledArrowRight />
-          </PaginationButton>
-          <PaginationCounter>01/06</PaginationCounter>
+          <ButtonsContainer>
+            <PaginationButton>
+              <StyledArrowLeft />
+            </PaginationButton>
+            <PaginationButton>
+              <StyledArrowRight />
+            </PaginationButton>
+          </ButtonsContainer>
+          <PaginationCounter>01/02</PaginationCounter>
         </Pagination>
       </MainPictureContainer>
     </StyledSlideshow>
