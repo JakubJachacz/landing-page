@@ -1,4 +1,5 @@
- import {
+ import { forwardRef } from "react";
+import {
   DescFirst,
   ItemFirst,
   Offer,
@@ -7,12 +8,12 @@
   TitleFirst,
 } from "./styled";
 
-const OfferSection = () => { 
+const OfferSection = forwardRef((props, ref) => { 
 
   return (
     <StyledSection>
       <OfferContainer>
-        <Offer>Oferta</Offer>
+        <Offer ref={ref}>Oferta</Offer>
         <ItemFirst>
           <TitleFirst>Rezydencja Poligonowa</TitleFirst>
           <DescFirst>
@@ -25,6 +26,6 @@ const OfferSection = () => {
       </OfferContainer> 
     </StyledSection> 
   );
-};
+});
 
 export default OfferSection;
