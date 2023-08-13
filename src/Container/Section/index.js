@@ -1,4 +1,4 @@
-import {
+ import {
   DescFirst,
   ItemFirst,
   Offer,
@@ -7,7 +7,8 @@ import {
   TitleFirst,
 } from "./styled";
 
-const OfferSection = () => {
+const OfferSection = () => { 
+
   return (
     <StyledSection>
       <OfferContainer>
@@ -20,7 +21,7 @@ const OfferSection = () => {
             Nasze lokale cenią wszyscy, którzy nie chcą żyć w wielkomiejskim
             tłoku.
           </DescFirst>
-        </ItemFirst>
+        </ItemFirst> 
       </OfferContainer> 
     </StyledSection> 
   );
