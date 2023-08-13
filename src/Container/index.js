@@ -23,7 +23,7 @@ const Container = () => {
     <Slideshow /> 
     <OfferSection ref={offerRef} />
     <OfferDetails /> 
-    {/* <FooterComponent /> */}
+    {/* <FooterComponent ref={contactRef}/> */}
     </>
   );
 };
