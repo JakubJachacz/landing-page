@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import { ReactComponent as Aura_Favicon } from "../images/Aura_Favicon.svg"
-import { ReactComponent as Logo } from "../images/logo_safeko.svg"
-import NavIcon from "../images/navigation.svg"
+import styled from "styled-components"; 
+import { ReactComponent as Logo } from "../../images/logo_safeko.svg";
+import NavIcon from "../../images/navigation.svg"
 
 export const StyledTopBar = styled.div`
 display: flex;
@@ -44,6 +43,10 @@ font-size: 17px;
 background-color: inherit;
 border: none;
 
+&:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 750px) {
     display: none;
   }
@@ -60,12 +63,14 @@ height: 50px;
   }
 `;
 
-export const NavButton = styled.div`
+export const NavButton = styled.button`
 width: 70px;
 height: 70px; 
 background-image: url(${NavIcon});
 background-repeat: no-repeat;
 background-position: center;
+background-color: inherit;
+border: none;
 
 @media (min-width: 751px) {
     display: none;
