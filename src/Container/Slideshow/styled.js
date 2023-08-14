@@ -24,7 +24,7 @@ export const StyledSlideshow = styled.div`
   }
 `;
 
-export const MainPictureContainer = styled.div` 
+export const MainPictureContainer = styled.div`
   max-width: 1400px;
   width: 100%;
   max-height: 700px;
@@ -66,6 +66,10 @@ export const ButtonsContainer = styled.span`
   display: flex;
   flex-direction: row;
   gap: 30px;
+
+  @media (max-width: 360px) {
+    gap: 0;
+  }
 `;
 
 export const PaginationButton = styled.button`

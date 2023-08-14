@@ -1,9 +1,12 @@
 import { css, styled } from "styled-components";
 import SecondaryPicture from "../../images/Photo_02.png";
 import ThirdPicture from "../../images/Photo_03.png";
+import ThirdPictureSmall from "../../images/Photo_03_small.png";
 import FourthPicture from "../../images/Photo_04.png";
+import FourthPictureSmall from "../../images/Photo_04_small.png";
 import { ReactComponent as VectorRight } from "../../images/VectorRight2.svg";
 import FifthPicture from "../../images/Photo_05.png";
+import FifthPictureSmall from "../../images/Photo_05_small.png";
 
 export const DetailsWrapper = styled.section`
   display: grid;
@@ -11,8 +14,8 @@ export const DetailsWrapper = styled.section`
   padding-top: 75px;
   width: 100%;
   max-width: 1440px;
-  height: 100%; 
-  margin: 0 auto; 
+  height: 100%;
+  margin: 0 auto;
 `;
 
 export const PictureWrapper = styled.div`
@@ -27,14 +30,23 @@ export const PictureTwo = styled.div`
   max-height: 615px;
   height: 100%;
   aspect-ratio: 2 / 1;
+
+  @media (max-width: 750px) {
+    width: 320px;
+    height: 200px;
+  }
 `;
 
 export const DetailsContainer = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   max-width: 1092px;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ColumnFirst = styled.div`
@@ -50,6 +62,11 @@ export const BorderWrap = styled.div`
   max-width: 539px;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 750px) {
+ width: 320px;
+ margin-left: 20px;
+}
 `;
 
 export const DetailsTitle = styled.h1`
@@ -62,7 +79,16 @@ export const DetailsTitle = styled.h1`
     isSecond &&
     css`
       margin-top: 179px;
+
+      @media (max-width: 750px) {
+  margin-top: 48px;
+  }
     `}
+
+  @media (max-width: 750px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
 `;
 
 export const Description = styled.p`
@@ -93,7 +119,7 @@ export const Wrapper = styled.span`
 
 export const Counter = styled.p`
   padding: 12px 0;
-  color: #474945;
+  color: #474945; 
 `;
 
 export const Details = styled.div`
@@ -102,6 +128,11 @@ export const Details = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
+
+  @media (max-width: 750px) {
+ font-size: 14px;
+ line-height: 21px;
+}
 `;
 
 export const PictureThree = styled.div`
@@ -113,6 +144,12 @@ export const PictureThree = styled.div`
   background-repeat: no-repeat;
   background-position: bottom;
   aspect-ratio: 2 / 1;
+
+  @media (max-width: 750px) {
+     width: 320px;
+     height: 200px;
+     background-image: url(${ThirdPictureSmall});
+    }
 `;
 
 export const StyledP = styled.p`
@@ -120,6 +157,12 @@ export const StyledP = styled.p`
   line-height: 113px;
   color: #181818;
   margin: 44px 0;
+
+  @media (max-width: 750px) {
+     font-size: 69px;
+     line-height: 91px;
+     margin: 8px 0;
+    }
 `;
 
 export const PictureFour = styled.div`
@@ -130,12 +173,22 @@ export const PictureFour = styled.div`
   height: 569px;
   margin-left: 120px;
   margin-top: calc(170px + 48px);
+
+  @media (max-width: 750px) { 
+      background-image: url(${FourthPictureSmall});
+      margin: 48px 0 0 0; 
+      height: 420px;
+    }
 `;
 
 export const LocalWrap = styled.div`
   margin-left: 103px;
   max-width: 430px;
   width: 100%;
+
+  @media (max-width: 750px) {
+     margin: 0; 
+    }
 `;
 
 export const LocalButton = styled.button`
@@ -153,6 +206,13 @@ export const LocalButton = styled.button`
   align-items: center;
   font-size: 16px;
   line-height: 22px;
+
+  @media (max-width: 750px) {
+     width: 201px;
+     font-size: 14px;
+     line-height: 21px; 
+     margin: 45px 0 0 60px;
+    }
 `;
 
 export const StyledVectorRight = styled(VectorRight)`
@@ -164,7 +224,14 @@ export const PictureFive = styled.div`
   width: 100%;
   max-height: 524px;
   height: 100%;
-  margin-top: 105px; 
+  margin-top: 105px;
   aspect-ratio: 1 / 2;
   background-image: url(${FifthPicture});
+
+  @media (max-width: 750px) {
+    background-image: url(${FifthPictureSmall});
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 400px;
+    }
 `;
