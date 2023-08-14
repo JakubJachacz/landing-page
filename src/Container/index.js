@@ -1,5 +1,5 @@
 import TopBar from "./TopBar"; 
-// import FooterComponent from "./Footer";
+import FooterComponent from "./Footer";
 import OfferDetails from "./OfferDetails";
 import OfferSection from "./Section";
 import Slideshow from "./Slideshow";
@@ -23,7 +23,7 @@ const Container = () => {
     <Slideshow /> 
     <OfferSection ref={offerRef} />
     <OfferDetails /> 
-    {/* <FooterComponent ref={contactRef}/> */}
+    <FooterComponent ref={contactRef}/>
     </>
   );
 };
