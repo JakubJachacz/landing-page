@@ -10,8 +10,7 @@ import {
   FooterText, 
 } from "./styled";
 
-const FooterComponent = forwardRef((props, ref) => {
-  // AIzaSyBkEnTvNr9ZedisHw5K8NcDHJqPOdARyos
+const FooterComponent = forwardRef((props, ref) => { 
 
   return (
     <FooterContainer>
