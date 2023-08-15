@@ -3,11 +3,10 @@ import GoogleMaps from "../../images/Maps.png";
 
 export const FooterContainer = styled.div`
   max-width: 1440px;
-  width: 100%;
-  max-height: 509px;
+  width: 100%; 
   height: 100%;
   background-color: #d9d9d9;
-  margin: 20px auto 0; 
+  margin: 20px auto 0;  
 `;
 
 export const FooterWrapper = styled.div`
