@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  DarkOverlay,
   NavButton,
   NavItem,
   NavList,
@@ -15,6 +16,7 @@ const TopBar = ({ scrollToRef }) => {
 
   const handleClick = (refName) => {
     scrollToRef(refName);
+    setShowList(false);
   };
 
   const toggleList = () => {
@@ -22,31 +24,38 @@ const TopBar = ({ scrollToRef }) => {
   };
 
   return (
-    <StyledTopBar>
-      <Title>
-        <StyledLogo />
-      </Title>
-      <StyledNavigation>
-        <NavItem isDesktop onClick={() => handleClick("offer")}>
-          Oferta
-        </NavItem>
-        <NavItem isDesktop onClick={() => handleClick("contact")}>
-          Kontakt
-        </NavItem>
-        <NavButton onClick={toggleList} />
-        {showList && (
-          <NavList>
-            <StyledList isFirst>
-              <NavItem onClick={() => handleClick("offer")}>Oferta</NavItem>
-            </StyledList>
-            <StyledList>
-              <NavItem onClick={() => handleClick("contact")}>Kontakt</NavItem>
-            </StyledList>
-            <StyledList isLast>kontakt@safekohouse.com +48 609 505 111</StyledList>
-          </NavList>
-        )}
-      </StyledNavigation>
-    </StyledTopBar>
+    <>
+      <StyledTopBar>
+        <Title>
+          <StyledLogo />
+        </Title>
+        <StyledNavigation>
+          <NavItem isDesktop onClick={() => handleClick("offer")}>
+            Oferta
+          </NavItem>
+          <NavItem isDesktop onClick={() => handleClick("contact")}>
+            Kontakt
+          </NavItem>
+          <NavButton onClick={toggleList} showList={showList} />
+          {showList && (
+            <NavList>
+              <StyledList isFirst>
+                <NavItem onClick={() => handleClick("offer")}>Oferta</NavItem>
+              </StyledList>
+              <StyledList>
+                <NavItem onClick={() => handleClick("contact")}>
+                  Kontakt
+                </NavItem>
+              </StyledList>
+              <StyledList isLast>
+                kontakt@safekohouse.com +48 609 505 111
+              </StyledList>
+            </NavList>
+          )}
+        </StyledNavigation>
+      </StyledTopBar>
+      {showList && <DarkOverlay />}
+    </>
   );
 };
 
