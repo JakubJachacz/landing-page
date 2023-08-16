@@ -22,7 +22,7 @@ const Container = () => {
     <TopBar scrollToRef={scrollToRef}/> 
     <Slideshow /> 
     <OfferSection ref={offerRef} />
-    <OfferDetails /> 
+    <OfferDetails scrollToRef={scrollToRef} /> 
     <FooterComponent ref={contactRef}/>
     </>
   );
