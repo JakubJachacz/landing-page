@@ -15,12 +15,12 @@ import {
   PictureFour,
   PictureThree,
   PictureTwo,
-  StyledP,
-  StyledVectorRight,
+  StyledP, 
+  StyledVectorRight, 
   Wrapper,
-} from "./styled";
+} from "./styled"; 
 
-const OfferDetails = () => {
+const OfferDetails = ({ scrollToRef }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -33,6 +33,10 @@ const OfferDetails = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleClick = (refName) => {
+    scrollToRef(refName); 
+  };
 
   if (windowWidth <= 750) {
     return ( 
@@ -93,7 +97,7 @@ const OfferDetails = () => {
               <Counter>05</Counter>
               <Details>Atrakcyjnie położony dom względem stron świata</Details>
             </Wrapper>
-            <LocalButton>
+            <LocalButton onClick={() => handleClick("contact")}>
               Zobacz lokalizację <StyledVectorRight />
             </LocalButton>
           </LocalWrap>
@@ -145,7 +149,7 @@ const OfferDetails = () => {
                   Atrakcyjnie położony dom względem stron świata
                 </Details>
               </Wrapper>
-              <LocalButton>
+              <LocalButton onClick={() => handleClick("contact")}>
                 Zobacz lokalizację <StyledVectorRight />
               </LocalButton>
             </LocalWrap>
