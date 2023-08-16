@@ -87,8 +87,7 @@ export const Info = styled.p`
   }
 `;
 
-export const Maps = styled.div`
-  background: url(${GoogleMaps}) no-repeat center / cover;
+export const Maps = styled.div` 
 
   @media (max-width: 750px) {
     width: 360px;

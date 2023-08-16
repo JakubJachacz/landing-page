@@ -1,8 +1,6 @@
-import styled from "styled-components";
-import MainPicture from "../../images/Photo_01.png";
-import MainPictureSmall from "../../images/Photo_01_small.png";
-import { ReactComponent as ArrowLeft } from "../../images/VectorLeft.svg";
-import { ReactComponent as ArrowRight } from "../../images/VectorRight.svg";
+import styled from "styled-components"; 
+import { ReactComponent as ArrowLeft} from "../../images/VectorLeft.svg";
+import { ReactComponent as ArrowRight} from "../../images/VectorRight.svg"; 
 
 export const StyledSlideshow = styled.div`
   display: flex;
@@ -28,16 +26,16 @@ export const MainPictureContainer = styled.div`
   max-width: 1400px;
   width: 100%;
   max-height: 700px;
-  height: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: url(${MainPicture});
+  height: 100%; 
   position: relative;
   aspect-ratio: 2 / 1;
+  background-image: url(${props => props.imageUrl});
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (max-width: 750px) {
     margin: 0 10px;
-    background-image: url(${MainPictureSmall});
   }
 `;
 
@@ -79,11 +77,21 @@ export const PaginationButton = styled.button`
   display: flex;
   background-color: inherit;
   border: none;
+  background-repeat: no-repeat;
+  background-position: center;  
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: default; 
+  } 
 
   @media (max-width: 750px) {
     height: 60px;
     width: 60px;
-  }
+  } 
 `;
 
 export const PaginationCounter = styled.p`
@@ -101,9 +109,23 @@ export const PaginationCounter = styled.p`
 `;
 
 export const StyledArrowLeft = styled(ArrowLeft)`
-  margin: auto;
+margin: auto; 
+fill: ${({ disabled }) => (disabled ? '#71746e' : '#FAFAFA')};
+
+@media (max-width: 750px) {
+     width: 18px;
+     height: 14px;
+    } 
 `;
+ 
 
 export const StyledArrowRight = styled(ArrowRight)`
-  margin: auto;
+margin: auto; 
+fill: ${({ disabled }) => (disabled ? '#71746e' : '#FAFAFA')};
+
+@media (max-width: 750px) {
+     width: 18px;
+     height: 14px;
+    } 
 `;
+ 

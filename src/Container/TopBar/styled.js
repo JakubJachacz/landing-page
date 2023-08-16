@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as Logo } from "../../images/logo_safeko.svg";
-import NavIcon from "../../images/navigation.svg";
+import ButtonOpen from "../../images/navigation.svg";
+import ButtonClose from "../../images/ButtonClose.svg"
 
 export const StyledTopBar = styled.div`
   display: flex;
@@ -8,6 +9,7 @@ export const StyledTopBar = styled.div`
   width: 100%;
   height: 80px;
   background-color: #FCFCFC;
+  z-index: 4; 
 
   @media (max-width: 750px) {
     height: 70px;
@@ -18,6 +20,7 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   padding: 15px 60px;
+  z-index: 4;
 
   @media (max-width: 750px) {
     padding: 15px 30px;
@@ -31,6 +34,7 @@ export const StyledNavigation = styled.nav`
   max-width: 410px;
   width: 100%;
   margin-right: 40px;
+  z-index: 4;
 
   @media (max-width: 750px) {
     margin: 0;
@@ -43,6 +47,7 @@ export const NavItem = styled.button`
   font-size: 17px;
   background-color: inherit;
   border: none;
+  z-index: 4;
 
   &:hover {
     cursor: pointer;
@@ -75,7 +80,8 @@ export const StyledLogo = styled(Logo)`
 export const NavButton = styled.button`
   width: 70px;
   height: 70px;
-  background-image: url(${NavIcon});
+  background-image: ${(props) =>
+    `url(${props.showList ? ButtonClose : ButtonOpen})`};
   background-repeat: no-repeat;
   background-position: center;
   background-color: inherit;
@@ -119,3 +125,14 @@ export const StyledList = styled.li`
     `} 
 `;
  
+export const DarkOverlay = styled.div`
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(24, 24, 24, 0.6); 
+z-index: 3;  
+display: block;
+margin-top: 70px;
+`;
