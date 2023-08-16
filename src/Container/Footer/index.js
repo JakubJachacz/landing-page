@@ -7,10 +7,12 @@ import {
   QuestionsContainer,
   Info,
   QuestionsTitle,
-  FooterText, 
+  FooterText,
 } from "./styled";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
-const FooterComponent = forwardRef((props, ref) => { 
+const FooterComponent = forwardRef((props, ref) => {
+  const defaultCenter = { lat: 51.5074, lng: -0.1278 };
 
   return (
     <FooterContainer>
@@ -25,14 +27,26 @@ const FooterComponent = forwardRef((props, ref) => {
           <Info isLast>NIP: 712 338 48 46</Info>
           <Info>KRS: 0000779078</Info>
         </QuestionsContainer>
-        <Maps /> 
-          <FooterText>© Safeko house</FooterText>
-          <FooterText>Polityka prywatności</FooterText>
-          <FooterText isLast>
-            Stosujemy pliki cookies. Korzystanie ze strony bez zmiany ustawień
-            przeglądarki oznacza, że pliki cookies będą zamieszczane w Twoim
-            urządzeniu. Czytaj więcej
-          </FooterText> 
+        <Maps>
+          <LoadScript
+            googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
+          >
+            <GoogleMap
+              mapContainerStyle={{ width: "100%", height: "400px" }} // Adjust height as needed
+              center={defaultCenter}
+              zoom={10}
+            >
+              <Marker position={defaultCenter} />
+            </GoogleMap>
+          </LoadScript>
+        </Maps>
+        <FooterText>© Safeko house</FooterText>
+        <FooterText>Polityka prywatności</FooterText>
+        <FooterText isLast>
+          Stosujemy pliki cookies. Korzystanie ze strony bez zmiany ustawień
+          przeglądarki oznacza, że pliki cookies będą zamieszczane w Twoim
+          urządzeniu. Czytaj więcej
+        </FooterText>
       </FooterWrapper>
     </FooterContainer>
   );
