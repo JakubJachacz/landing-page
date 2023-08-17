@@ -12,7 +12,7 @@ import {
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const FooterComponent = forwardRef((props, ref) => {
-  const defaultCenter = { lat: 51.5074, lng: -0.1278 };
+  const defaultCenter = { lat: 51.267180, lng: 22.562455 }; 
 
   return (
     <FooterContainer>
@@ -32,9 +32,9 @@ const FooterComponent = forwardRef((props, ref) => {
             googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
           >
             <GoogleMap
-              mapContainerStyle={{ width: "100%", height: "400px" }} // Adjust height as needed
+              mapContainerStyle={{ width: "100%", height: "400px" }} 
               center={defaultCenter}
-              zoom={10}
+              zoom={13}
             >
               <Marker position={defaultCenter} />
             </GoogleMap>
