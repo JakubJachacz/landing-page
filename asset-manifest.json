@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/landing-page/static/css/main.e044ab77.css",
-    "main.js": "/landing-page/static/js/main.9543afd5.js",
+    "main.css": "/landing-page/static/css/main.662bcd19.css",
+    "main.js": "/landing-page/static/js/main.aa18e339.js",
     "static/js/787.6606bfd5.chunk.js": "/landing-page/static/js/787.6606bfd5.chunk.js",
     "static/media/Photo_01.png": "/landing-page/static/media/Photo_01.03fd86d03c74190cf983.png",
     "static/media/Photo_05.png": "/landing-page/static/media/Photo_05.486826cf0f7dfc6edeec.png",
+    "static/media/Photo_01_two.png": "/landing-page/static/media/Photo_01_two.8bc3eaeb9c9d5cf9a07c.png",
     "static/media/Photo_02.png": "/landing-page/static/media/Photo_02.c20f901a20618d448771.png",
     "static/media/Photo_04.png": "/landing-page/static/media/Photo_04.9732a505ff113fc3679e.png",
     "static/media/Photo_05_small.png": "/landing-page/static/media/Photo_05_small.b6080264df088fe1b1e4.png",
-    "static/media/Photo_01_small.png": "/landing-page/static/media/Photo_01_small.e85a890a5e81e8b0b109.png",
     "static/media/Photo_03.png": "/landing-page/static/media/Photo_03.6809de4a3ebbe8fb5f32.png",
     "static/media/Photo_04_small.png": "/landing-page/static/media/Photo_04_small.c51b39396aa023cfb75a.png",
     "static/media/Photo_03_small.png": "/landing-page/static/media/Photo_03_small.b1d73e8c204e05406164.png",
@@ -17,15 +17,16 @@
     "static/media/logo_safeko.svg": "/landing-page/static/media/logo_safeko.660cf9e43ee091b0a6f28ccf63b41239.svg",
     "index.html": "/landing-page/index.html",
     "static/media/navigation.svg": "/landing-page/static/media/navigation.308f79242620c99b10a234b1e93c4710.svg",
-    "static/media/VectorLeft.svg": "/landing-page/static/media/VectorLeft.4823d5a0a16b03ddc336bee553d9be98.svg",
-    "static/media/VectorRight.svg": "/landing-page/static/media/VectorRight.ef8dae333d68901a19a746202cddd45e.svg",
-    "static/media/VectorRight2.svg": "/landing-page/static/media/VectorRight2.9743ae36f5334462fb5de0522f50f398.svg",
-    "main.e044ab77.css.map": "/landing-page/static/css/main.e044ab77.css.map",
-    "main.9543afd5.js.map": "/landing-page/static/js/main.9543afd5.js.map",
+    "static/media/ButtonClose.svg": "/landing-page/static/media/ButtonClose.869bc5e73c43c6d26419729b82ccbc96.svg",
+    "static/media/VectorLeft.svg": "/landing-page/static/media/VectorLeft.90aafb33d1bd2edd30b575a4c900118b.svg",
+    "static/media/VectorRight2.svg": "/landing-page/static/media/VectorRight2.2930a235baa09401ae2f8a9ee30f50b3.svg",
+    "static/media/VectorRight.svg": "/landing-page/static/media/VectorRight.80b86ef41edfb1b14ed35b8a7e2f921c.svg",
+    "main.662bcd19.css.map": "/landing-page/static/css/main.662bcd19.css.map",
+    "main.aa18e339.js.map": "/landing-page/static/js/main.aa18e339.js.map",
     "787.6606bfd5.chunk.js.map": "/landing-page/static/js/787.6606bfd5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e044ab77.css",
-    "static/js/main.9543afd5.js"
+    "static/css/main.662bcd19.css",
+    "static/js/main.aa18e339.js"
   ]
 }
