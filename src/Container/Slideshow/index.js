@@ -7,18 +7,15 @@ import {
   PaginationCounter,
   StyledArrowLeft,
   StyledArrowRight,
-  StyledSlideshow, 
+  StyledSlideshow,
 } from "./styled";
 import image1 from "../../images/Photo_01.png";
 import image2 from "../../images/Photo_01_two.png";
 
-const images = [
-  image1,
-  image2,
-];
+const images = [image1, image2];
 
 const Slideshow = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0); 
 
   const handlePrevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -40,11 +37,17 @@ const Slideshow = () => {
       <MainPictureContainer imageUrl={images[currentIndex]}>
         <Pagination>
           <ButtonsContainer>
-            <PaginationButton onClick={handlePrevSlide} disabled={isAtFirstImage}>
-              <StyledArrowLeft disabled={isAtFirstImage}/>
+            <PaginationButton
+              onClick={handlePrevSlide}
+              disabled={isAtFirstImage}
+            >
+              <StyledArrowLeft disabled={isAtFirstImage} />
             </PaginationButton>
-            <PaginationButton onClick={handleNextSlide} disabled={isAtLastImage}>
-              <StyledArrowRight disabled={isAtLastImage}/>
+            <PaginationButton
+              onClick={handleNextSlide}
+              disabled={isAtLastImage}
+            >
+              <StyledArrowRight disabled={isAtLastImage} />
             </PaginationButton>
           </ButtonsContainer>
           <PaginationCounter>
