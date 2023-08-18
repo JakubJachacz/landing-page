@@ -33,6 +33,7 @@ export const MainPictureContainer = styled.div`
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-image 0.3s linear;
 
   @media (max-width: 750px) {
     margin: 0 10px;
@@ -82,6 +83,7 @@ export const PaginationButton = styled.button`
 
   &:hover {
     cursor: pointer;
+    background-color: #2c2c2c;
   }
 
   &:disabled {
