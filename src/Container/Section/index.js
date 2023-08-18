@@ -11,9 +11,9 @@ import {
 const OfferSection = forwardRef((props, ref) => { 
 
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <OfferContainer>
-        <Offer ref={ref}>Oferta</Offer>
+        <Offer>Oferta</Offer>
         <ItemFirst>
           <TitleFirst>Rezydencja Poligonowa</TitleFirst>
           <DescFirst>
