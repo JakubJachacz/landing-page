@@ -3,10 +3,10 @@ import GoogleMaps from "../../images/Maps.png";
 
 export const FooterContainer = styled.div`
   max-width: 1440px;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   background-color: #d9d9d9;
-  margin: 20px auto 0;  
+  margin: 20px auto 0;
 `;
 
 export const FooterWrapper = styled.div`
@@ -14,7 +14,7 @@ export const FooterWrapper = styled.div`
   grid-template-columns: 2fr 6fr 9fr;
 
   @media (max-width: 750px) {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -73,6 +73,13 @@ export const Info = styled.p`
     isMiddle &&
     css`
       padding-top: 12px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #6a6a6a;
+      }
     `}
 
   ${({ isLast }) =>
@@ -87,8 +94,7 @@ export const Info = styled.p`
   }
 `;
 
-export const Maps = styled.div` 
-
+export const Maps = styled.div`
   @media (max-width: 750px) {
     width: 360px;
     height: 400px;
@@ -107,6 +113,7 @@ export const FooterText = styled.p`
   margin: 0;
   padding-top: 20px;
   border-top: 1px solid #71746e;
+  position: relative;
 
   @media (max-width: 750px) {
     border: none;
@@ -115,16 +122,53 @@ export const FooterText = styled.p`
     max-height: 21px;
   }
 
+  ${({ isClickable }) =>
+    isClickable &&
+    css`
+      transition: color 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #6a6a6a;
+      }
+    `}
+
   ${({ isLast }) =>
     isLast &&
     css`
       max-width: 536px;
       padding-right: 80px;
+      flex-direction: column;
+      padding-top: 0;
+
+      @media (max-width: 1440px) {
+        padding-right: 65px;
+      }
 
       @media (max-width: 750px) {
-        padding: 24px 0 0 20px; 
-        width: 300px; 
-        margin-bottom: 85px;
+        padding: 24px 0 0 20px;
+        width: 300px;
+        margin-bottom: 35px;
       }
     `}
+`;
+
+export const ReadMore = styled.a`
+  border: none;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  right: 29%;
+  transition: color 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #6a6a6a;
+  }
+
+  @media (min-width: 1441px) {
+    right: 31%;
+  }
 `;
