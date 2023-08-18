@@ -216,6 +216,7 @@ export const LocalButton = styled.button`
 
   &:hover {
     cursor: pointer;
+    background-color: #2c2c2c;
   }
 
   &:active {
