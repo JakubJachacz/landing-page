@@ -7,6 +7,10 @@ export const FooterContainer = styled.div`
   height: 100%;
   background-color: #d9d9d9;
   margin: 20px auto 0;
+
+  @media (max-width: 750px) {
+    padding-bottom: 46px;
+  }
 `;
 
 export const FooterWrapper = styled.div`
@@ -170,5 +174,10 @@ export const ReadMore = styled.a`
 
   @media (min-width: 1441px) {
     right: 31%;
+  }
+
+  @media (max-width: 750px) {
+    top: 210%;
+    right: 69%;
   }
 `;
