@@ -47,11 +47,11 @@ const OfferDetails = ({ scrollToRef }) => {
             <DetailsTitle>Nowoczesne domy</DetailsTitle>
             <Wrapper isFirst={true}>
               <Counter>01</Counter>
-              <Details>200 m2 powierzchni użytkowej</Details>
+              <Details>200 m² powierzchni użytkowej</Details>
             </Wrapper>
             <Wrapper>
               <Counter>02</Counter>
-              <Details>500 m2 działka</Details>
+              <Details>500 m² działka</Details>
             </Wrapper>
             <PictureThree />
             <StyledP>200 m²</StyledP>
@@ -120,11 +120,11 @@ const OfferDetails = ({ scrollToRef }) => {
             <DetailsTitle>Nowoczesne domy</DetailsTitle>
             <Wrapper isFirst={true}>
               <Counter>01</Counter>
-              <Details>200 m2 powierzchni użytkowej</Details>
+              <Details>200 m² powierzchni użytkowej</Details>
             </Wrapper>
             <Wrapper>
               <Counter>02</Counter>
-              <Details>500 m2 działka</Details>
+              <Details>500 m² działka</Details>
             </Wrapper>
             <PictureThree />
             <StyledP>200 m²</StyledP>
