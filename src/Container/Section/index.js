@@ -17,10 +17,7 @@ const OfferSection = forwardRef((props, ref) => {
         <ItemFirst>
           <TitleFirst>Rezydencja Poligonowa</TitleFirst>
           <DescFirst>
-            Domy projektujemy z myślą o sobie i naszych rodzinach. To inwestycje
-            nowoczesne i funkcjonalne, a przede wszystkim przyjazne mieszkańcom.
-            Nasze lokale cenią wszyscy, którzy nie chcą żyć w wielkomiejskim
-            tłoku.
+            Domy Safeko house to inwestycja na pokolenia. Przemyślany projekt wykorzystuje do maksimum możliwości związane z nieruchomością. Solidne budownictwo wsparte nowymi i ekologicznymi technologiami spełni wymogi wymagających inwestorów. Twoja rodzina zasługuje na to co najlepsze.
           </DescFirst>
         </ItemFirst> 
       </OfferContainer> 

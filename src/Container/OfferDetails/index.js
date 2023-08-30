@@ -56,9 +56,7 @@ const OfferDetails = ({ scrollToRef }) => {
             <PictureThree />
             <StyledP>200 m²</StyledP>
             <Description>
-              Budujemy według najwyższych standardów, korzystając z wiedzy,
-              doświadczenia i wizji sprawdzonych architektów oraz niezawodnego
-              działu realizacji inwestycji.
+            Proponujemy inteligentne i sprawdzone rozwiązania technologiczne, lecz to inwestor zdecyduje o ostatecznym wyborze udogodnień. 
             </Description>
             <Wrapper isFirst>
               <Counter>01</Counter>
@@ -162,9 +160,7 @@ const OfferDetails = ({ scrollToRef }) => {
         <ColumnSecond>
           <BorderWrap>
             <Description>
-              Budujemy według najwyższych standardów, korzystając z wiedzy,
-              doświadczenia i wizji sprawdzonych architektów oraz niezawodnego
-              działu realizacji inwestycji.
+            Proponujemy inteligentne i sprawdzone rozwiązania technologiczne, lecz to inwestor zdecyduje o ostatecznym wyborze udogodnień. 
             </Description>
             <Wrapper isFirst>
               <Counter>01</Counter>
