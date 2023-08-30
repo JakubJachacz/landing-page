@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ButtonsContainer,
+  Loading,
   MainPictureContainer,
   Pagination,
   PaginationButton,
@@ -15,7 +16,9 @@ import image2 from "../../images/Photo_01_two.png";
 const images = [image1, image2];
 
 const Slideshow = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [preloadedImages, setPreloadedImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handlePrevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -32,9 +35,37 @@ const Slideshow = () => {
   const isAtFirstImage = currentIndex === 0;
   const isAtLastImage = currentIndex === images.length - 1;
 
+  useEffect(() => {
+    const preloadImages = images.map((imageSrc) => {
+      const img = new Image();
+      img.src = imageSrc;
+      return img;
+    });
+
+    Promise.all(preloadImages).then(() => {
+      setPreloadedImages(preloadImages);
+      setIsLoading(false);
+    });
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (isAtLastImage) {
+        setCurrentIndex(0);
+      } else {
+        handleNextSlide();
+      }
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex, isAtLastImage]);
+
   return (
     <StyledSlideshow>
-      <MainPictureContainer imageUrl={images[currentIndex]}>
+          {isLoading ? ( 
+      <Loading>Loading...</Loading>
+    ) : (
+      <MainPictureContainer imageUrl={preloadedImages[currentIndex]?.src}>
         <Pagination>
           <ButtonsContainer>
             <PaginationButton
@@ -54,7 +85,8 @@ const Slideshow = () => {
             {currentIndex + 1}/{images.length}
           </PaginationCounter>
         </Pagination>
-      </MainPictureContainer>
+        </MainPictureContainer>
+    )}
     </StyledSlideshow>
   );
 };
