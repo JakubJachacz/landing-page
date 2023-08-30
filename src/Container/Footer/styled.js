@@ -72,29 +72,13 @@ export const Info = styled.p`
   font-size: 18px;
   line-height: 24px;
   margin: 0;
+  padding-top: 12px;
+  transition: color 0.2s ease;
 
-  ${({ isMiddle }) =>
-    isMiddle &&
-    css`
-      padding-top: 12px;
-      transition: color 0.2s ease;
-
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-        color: #6a6a6a;
-      }
-    `}
-
-  ${({ isLast }) =>
-    isLast &&
-    css`
-      padding-top: 20px;
-    `}
-
-    @media (max-width: 750px) {
-    font-size: 16px;
-    line-height: 23px;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #6a6a6a;
   }
 `;
 
@@ -106,10 +90,13 @@ export const Maps = styled.div`
   }
 `;
 
+export const FooterTextWrap = styled.div` 
+height: 86px;
+`;
+
 export const FooterText = styled.p`
   display: flex;
-  justify-content: center;
-  height: 86px;
+  justify-content: center; 
   color: #71746e;
   font-size: 14px;
   line-height: 21px;
@@ -126,9 +113,12 @@ export const FooterText = styled.p`
     max-height: 21px;
   }
 
-  ${({ isClickable }) =>
-    isClickable &&
+  ${({ isAkanza }) =>
+    isAkanza &&
     css`
+    height: 0;
+    padding: 10px 0 0 20px;
+    border: none;
       transition: color 0.2s ease;
 
       &:hover {
