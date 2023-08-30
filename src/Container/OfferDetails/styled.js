@@ -11,7 +11,7 @@ import { ReactComponent as VectorRight } from "../../images/VectorRight2.svg";
 export const DetailsWrapper = styled.section`
   display: grid;
   place-items: center;
-  padding-top: 75px;
+  padding-top: 175px;
   width: 100%;
   max-width: 1440px;
   height: 100%;
@@ -150,6 +150,7 @@ export const PictureThree = styled.div`
     width: 320px;
     height: 200px;
     background-image: url(${ThirdPictureSmall});
+    padding-top: 48px;
   }
 `;
 

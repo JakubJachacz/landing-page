@@ -4,7 +4,7 @@ export const StyledSection = styled.section`
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 132px;
 
   @media (max-width: 750px) {
 padding-top: 20px;
