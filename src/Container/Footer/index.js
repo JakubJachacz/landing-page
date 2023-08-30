@@ -9,6 +9,7 @@ import {
   QuestionsTitle,
   FooterText,
   ReadMore,
+  FooterTextWrap,
 } from "./styled";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
@@ -27,20 +28,25 @@ const FooterComponent = forwardRef((props, ref) => {
     window.location.href = 'https://github.com/JakubJachacz/landing-page';
   };
 
+  const PhoneNumber = "+48 609 505 111";
+  const handlePhoneNumberClick = () => {
+    window.location.href = `tel:${PhoneNumber}`;
+  };
+
+  const redirectToAkanza = () => {
+    window.open('https://akanza.pl/', '_blank');
+  }; 
+
   return (
     <FooterContainer>
       <FooterWrapper>
         <Contact ref={ref}>Kontakt</Contact>
         <QuestionsContainer>
-          <QuestionsTitle>Masz pytania?</QuestionsTitle>
-          <Info>Safeko house sp. z o.o.</Info>
-          <Info>ul. Mackiewicza 21/31, 20-865 Lublin</Info>
-          <Info isMiddle onClick={handleEmailClick}>
+          <QuestionsTitle>Masz pytania?</QuestionsTitle> 
+          <Info onClick={handleEmailClick}>
             kontakt@safekohouse.com
           </Info>
-          <Info>+48 609 505 111</Info>
-          <Info isLast>NIP: 712 338 48 46</Info>
-          <Info>KRS: 0000779078</Info>
+          <Info onClick={handlePhoneNumberClick}>{PhoneNumber}</Info>
         </QuestionsContainer>
         <Maps>
           <LoadScript
@@ -55,7 +61,10 @@ const FooterComponent = forwardRef((props, ref) => {
             </GoogleMap>
           </LoadScript>
         </Maps>
+        <FooterTextWrap>
         <FooterText>© Safeko house</FooterText>
+        <FooterText isAkanza onClick={redirectToAkanza}>realizacja: akanza.pl</FooterText>
+        </FooterTextWrap>
         <FooterText isClickable onClick={redirectToPrivacyPolitics}>Polityka prywatności</FooterText>
         <FooterText isLast>
           Stosujemy pliki cookies. Korzystanie ze strony bez zmiany ustawień
