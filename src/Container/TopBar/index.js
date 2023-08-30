@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   DarkOverlay,
+  ListContainer,
   NavButton,
   NavItem,
   NavList,
@@ -23,6 +24,15 @@ const TopBar = ({ scrollToRef }) => {
     setShowList(!showList);
   };
 
+  const PhoneNumber = "+48 609 505 111";
+  const handlePhoneNumberClick = () => {
+    window.location.href = `tel:${PhoneNumber}`;
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = "mailto:kontakt@safekohouse.com";
+  };
+
   return (
     <>
       <StyledTopBar>
@@ -38,7 +48,7 @@ const TopBar = ({ scrollToRef }) => {
           </NavItem>
           <NavButton onClick={toggleList} showList={showList} />
           {showList && (
-            <NavList>
+            <NavList showAnimation={showList}>
               <StyledList isFirst>
                 <NavItem onClick={() => handleClick("offer")}>Oferta</NavItem>
               </StyledList>
@@ -47,9 +57,10 @@ const TopBar = ({ scrollToRef }) => {
                   Kontakt
                 </NavItem>
               </StyledList>
-              <StyledList isLast>
-                kontakt@safekohouse.com +48 609 505 111
-              </StyledList>
+              <ListContainer>
+                <StyledList onClick={handleEmailClick}>kontakt@safekohouse.com</StyledList>
+                <StyledList isLast onClick={handlePhoneNumberClick}>+48 609 505 111</StyledList>
+              </ListContainer>
             </NavList>
           )}
         </StyledNavigation>
