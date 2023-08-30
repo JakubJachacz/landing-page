@@ -119,6 +119,7 @@ export const Wrapper = styled.span`
 
 export const Counter = styled.p`
   padding: 12px 0;
+  margin-left: -1px;
   color: #474945;
 `;
 
