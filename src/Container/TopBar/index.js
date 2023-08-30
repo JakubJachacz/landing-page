@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   DarkOverlay,
   ListContainer,
@@ -14,6 +14,7 @@ import {
 
 const TopBar = ({ scrollToRef }) => {
   const [showList, setShowList] = useState(false);
+  const listRef = useRef(null); 
 
   const handleClick = (refName) => {
     scrollToRef(refName);
@@ -24,6 +25,24 @@ const TopBar = ({ scrollToRef }) => {
     setShowList(!showList);
   };
 
+  const closeList = () => {
+    setShowList(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
+  const handleOutsideClick = (event) => {
+    if (listRef.current && !listRef.current.contains(event.target)) {
+      closeList();
+    }
+  };
+
   const PhoneNumber = "+48 609 505 111";
   const handlePhoneNumberClick = () => {
     window.location.href = `tel:${PhoneNumber}`;
@@ -32,6 +51,7 @@ const TopBar = ({ scrollToRef }) => {
   const handleEmailClick = () => {
     window.location.href = "mailto:kontakt@safekohouse.com";
   };
+
 
   return (
     <>
@@ -48,7 +68,7 @@ const TopBar = ({ scrollToRef }) => {
           </NavItem>
           <NavButton onClick={toggleList} showList={showList} />
           {showList && (
-            <NavList showAnimation={showList}>
+            <NavList showAnimation={showList} ref={listRef}>
               <StyledList isFirst>
                 <NavItem onClick={() => handleClick("offer")}>Oferta</NavItem>
               </StyledList>
